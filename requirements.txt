@@ -1,0 +1,9 @@
+dandi
+pynwb
+h5py
+remfile
+numpy
+pandas
+scipy
+matplotlib
+scikit-learn
