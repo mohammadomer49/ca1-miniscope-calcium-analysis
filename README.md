@@ -27,7 +27,7 @@ The NWB file already contains processed optical-physiology outputs. This analysi
 1. Stream the public NWB file directly from DANDI with `PyNWB` and `remfile`.
 2. Inspect the optical-physiology and behavioral modules.
 3. Extract denoised and deconvolved calcium activity for 783 ROIs.
-4. Z-score ROI activity and visualize representative traces and a population heatmap.
+4. Z-score ROI activity and visualize representative traces and population activity.
 5. Align population activity to the three foot-shock periods.
 6. Compare pre-, during-, and post-shock activity descriptively.
 7. Convert ezTrack freezing intervals into a mask on the calcium timestamps.
@@ -36,33 +36,13 @@ The NWB file already contains processed optical-physiology outputs. This analysi
 
 ## Selected results
 
-### Representative CA1 calcium traces
+- The three shock events did not show a uniform population-wide response, so the peri-event analysis is treated as descriptive rather than inferential.
+- Freezing occupied about 6% of the analyzed session.
+- Mean population activity and the fraction of active ROIs differed only slightly between freezing and non-freezing epochs.
+- ROI-level responses were heterogeneous, with both increases and decreases during freezing.
+- PC1 and PC2 together explained about 9.7% of the population variance, with substantial overlap between freezing and non-freezing states in low-dimensional space.
 
-![Representative CA1 traces](figures/example_ca1_traces.png)
-
-### Population activity with foot-shock periods
-
-![Population heatmap](figures/population_heatmap_shocks.png)
-
-### Shock-aligned population activity
-
-![Shock-aligned activity](figures/shock_aligned_population.png)
-
-The three shock events did not show a uniform population-wide response, so the peri-event analysis is treated as descriptive rather than inferential.
-
-### Freezing-related activity
-
-![Freezing population activity](figures/freezing_population_activity.png)
-
-Freezing occupied about 6% of the analyzed session. Mean population activity and the fraction of active ROIs differed only slightly between freezing and non-freezing epochs. ROI-level responses were heterogeneous.
-
-![ROI freezing difference](figures/roi_freezing_difference.png)
-
-### Low-dimensional population state
-
-![PCA freezing state](figures/pca_freezing_state.png)
-
-PC1 and PC2 together explained about 9.7% of the population variance. Freezing epochs occupied a partially restricted region of PC1-PC2 space, with substantial overlap with non-freezing activity.
+All figures are generated directly by the notebook when run.
 
 ## Tools
 
